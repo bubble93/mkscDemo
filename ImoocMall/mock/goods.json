@@ -4,21 +4,33 @@
     "result":[
         {
             "productId": "100001",
-            "productName": "小米6",
-            "productPrice": 2499,
+            "productName": "小米1",
+            "productPrice": 24991,
             "productImg": "1.jpg"
         },
         {
             "productId": "100001",
-            "productName": "小米6",
-            "productPrice": 2499,
+            "productName": "小米2",
+            "productPrice": 24992,
             "productImg": "2.jpg"
         },
         {
             "productId": "100001",
-            "productName": "小米6",
-            "productPrice": 2499,
+            "productName": "小米3",
+            "productPrice": 24993,
             "productImg": "3.jpg"
+        },
+        {
+            "productId": "100001",
+            "productName": "小米3",
+            "productPrice": 24993,
+            "productImg": "4.jpg"
+        },
+        {
+            "productId": "100001",
+            "productName": "小米3",
+            "productPrice": 24993,
+            "productImg": "5.jpg"
         }
     ]
 }

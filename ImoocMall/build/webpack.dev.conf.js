@@ -9,14 +9,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-const express = require('express')
+
 
 //add moke
+var express = require('express')
 var app = express();
 var router = express.Router();
-router.get("/goods", function(req, res, next){
+var goodsData = require('./../mock/goods.json');
+app.use("/", router);
 
-});
 //add moke
 
 const HOST = process.env.HOST
@@ -51,6 +52,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before(app) {
+      app.get('/goods', (req, res) => {
+        res.json(goodsData)
+      })
     }
   },
   plugins: [
