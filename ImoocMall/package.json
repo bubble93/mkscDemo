@@ -11,7 +11,14 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "morgan": "^1.9.1",
+    "pm2": "^3.4.0",
+    "serve-favicon": "^2.5.0",
     "vue": "^2.5.2",
+    "vue-infinite-scroll": "^2.0.2",
     "vue-lazyload": "^1.2.6",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1"

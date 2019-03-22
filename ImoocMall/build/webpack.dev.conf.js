@@ -12,11 +12,11 @@ const portfinder = require('portfinder')
 
 
 //add moke
-var express = require('express')
-var app = express();
-var router = express.Router();
-var goodsData = require('./../mock/goods.json');
-app.use("/", router);
+// var express = require('express')
+// var app = express();
+// var router = express.Router();
+// var goodsData = require('./../mock/goods.json');
+// app.use("/", router);
 
 //add moke
 
@@ -52,12 +52,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
-    },
-    before(app) {
-      app.get('/goods', (req, res) => {
-        res.json(goodsData)
-      })
     }
+    // ,
+    // before(app) {
+    //   app.get('/goods', (req, res) => {
+    //     res.json(goodsData)
+    //   })
+    // }
   },
   plugins: [
     new webpack.DefinePlugin({
