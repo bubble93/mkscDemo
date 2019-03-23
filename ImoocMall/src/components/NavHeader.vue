@@ -64,6 +64,7 @@
 <script>
   import axios from 'axios'
   import './../assets/css/login.css'
+  import { mapState } from 'vuex'
   export default {
     data(){
       return{
@@ -79,18 +80,19 @@
       this.checkLogin();
     },
     computed:{
-      nickName(){
-        return this.$store.state.nickName;
-      },
-      cartCount(){
-        return this.$store.state.cartCount;
-      }
+      ...mapState(['nickName','cartCount'])
+      // nickName(){
+      //   return this.$store.state.nickName;
+      // },
+      // cartCount(){
+      //   return this.$store.state.cartCount;
+      // }
     },
     methods:{
       getCartCount(){
         axios.get("/users/getCartCount").then((response)=>{
           let res = response.data;
-          this.$store.commit("updateCartCount", res.result);
+          this.$store.commit("initCartCount", res.result);
         });
       },
       checkLogin(){
