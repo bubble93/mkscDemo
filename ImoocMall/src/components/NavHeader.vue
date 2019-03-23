@@ -58,7 +58,6 @@
             </div>
           </div>
         </div>                  
-        <!-- <LoginModel class='md-modal modal-msg md-modal-transition' v-bind:class="{'md-show':loginModalFlag}"></LoginModel> -->
         <div class="md-overlay" v-if="loginModalFlag" @click="loginModalFlag=false"></div>
       </header>
 </template>
